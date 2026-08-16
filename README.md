@@ -92,7 +92,7 @@ File Manifest:The architecture is explicitly decoupled into independent compilat
 Ensure you have a standard C compiler (such as gcc) installed on your system terminal.
 
 Clone the repository: 
-git clone https://github.com/YOUR_USERNAME/address-book-c.git
+git clone https://github.com/GaneshAundakar/address-book-c.git
 cd address-book-c
 
 Compile the modular source files together: gcc main.c address_book.c file_io.c -o address_book_app
