@@ -22,6 +22,7 @@ void loadContactsFromFile(AddressBook *addressBook)
     FILE *fp = fopen("contacts.csv", "r");
 
     fscanf(fp, "%d\n", &addressBook -> contactCount);
+    
     printf("Count -> %d\n", addressBook -> contactCount);
     
     for(size_t i = 0; i < addressBook -> contactCount; i++)
