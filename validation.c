@@ -4,17 +4,7 @@
 #include "contact.h" 
 #include "validation.h"
 
-
-/* add all your functions here */
-
-
-
-
 /* Validation function */
-
-/* ==========================================
-   VALIDATION LOGIC IMPLEMENTATIONS
-   ========================================== */
 
 // Checks if name contains only letters and internal spaces
 int valid_name(const char name[])   
@@ -140,4 +130,3 @@ int valid_email(const char email[], AddressBook *addressBook)
 }
 
 /* End of validation function */
-
