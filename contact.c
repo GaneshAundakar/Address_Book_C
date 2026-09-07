@@ -6,24 +6,15 @@
 #include "file.h"
 #include "validation.h"  
 
-//#include "populate.h"
-
 /* Menu Driven functions */
 
 void initialize(AddressBook *addressBook) 
 {
     addressBook->contactCount = 0;
-//    populateAddressBook(addressBook);
-    
-    // Load contacts from file during initialization (After files)
+   
+	// Load contacts from file during initialization (After files)
     loadContactsFromFile(addressBook);
 }
-
-/* Validation function */
-
-/* ============================================================
-   VALIDATION LOGIC IMPLEMENTATIONS - REFER validation.c FILE
-   ============================================================ */
 
 /* 1. create contacts */
 
@@ -80,11 +71,6 @@ void createContact(AddressBook *addressBook)
     {
         strcpy(addressBook->contacts[addressBook->contactCount].email, temp_email);
     }
-
-    /*  scanf(" %[^\n]", addressBook -> contacts[addressBook -> contactCount].name);
-        scanf(" %s", addressBook -> contacts[addressBook -> contactCount].phone);
-        scanf(" %s", addressBook -> contacts[addressBook -> contactCount].email);  */
-
     addressBook -> contactCount++;    
 
     printf("Success: Contact added.!\n");
@@ -121,7 +107,6 @@ int searchContact(AddressBook *addressBook)
                 if(strcmp(name, addressBook -> contacts[i].name) == 0)
                 {
                     printf("Found -> Contact %d: %s | %s | %s\n", i+1, addressBook->contacts[i].name, addressBook->contacts[i].phone, addressBook->contacts[i].email);
- //                   printf("Contact %d: Name: %s, Phone: %s, Email: %s\n", i+1, addressBook -> contacts[i].name, addressBook -> contacts[i].phone, addressBook -> contacts[i].email);
                     return i;
                 }
             }
@@ -138,7 +123,6 @@ int searchContact(AddressBook *addressBook)
                 if(strcmp(num, addressBook -> contacts[i].phone) == 0)
                 {
                     printf("Found -> Contact %d: %s | %s | %s\n", i+1, addressBook->contacts[i].name, addressBook->contacts[i].phone, addressBook->contacts[i].email);
-                  //  printf("Contact %d: Name: %s, Phone: %s, Email: %s\n", i+1, addressBook -> contacts[i].name, addressBook -> contacts[i].phone, addressBook -> contacts[i].email);
                     return i;                
                 }
             }
@@ -155,7 +139,6 @@ int searchContact(AddressBook *addressBook)
                 if(strcmp(email, addressBook -> contacts[i].email) == 0)
                 {
                     printf("Found -> Contact %d: %s | %s | %s\n", i+1, addressBook->contacts[i].name, addressBook->contacts[i].phone, addressBook->contacts[i].email);
-          //        printf("Contact %d: Name: %s, Phone: %s, Email: %s\n", i+1, addressBook -> contacts[i].name, addressBook -> contacts[i].phone, addressBook -> contacts[i].email);
                     return i;
                 }
             }
@@ -355,7 +338,6 @@ void listContacts(AddressBook *addressBook)
     for(int i = 0; i < addressBook -> contactCount; i++)
     {
         printf("%d. Name: %-20s | Phone: %-12s | Email: %-25s\n",i + 1, addressBook->contacts[i].name, addressBook->contacts[i].phone, addressBook->contacts[i].email);
-        // printf("Contact %d: Name: %s, Phone: %s, Email: %s\n", i+1, addressBook -> contacts[i].name, addressBook -> contacts[i].phone, addressBook -> contacts[i].email);
         printf("\n");
     }
 }
