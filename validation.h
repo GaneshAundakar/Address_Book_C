@@ -3,9 +3,6 @@
 
 #include "contact.h" // 
 
-// Forward declaration of AddressBook structure to prevent circular dependency
-  // typedef struct AddressBook AddressBook;
-
 /* Core validation utilities */
 
 int has_three_consecutive_same(const char str[]);
